@@ -1,6 +1,6 @@
-<h2> My Blog <h2>
+<h3> My Blog <h3>
 <ul>
 <% @posts.each do |post| %>
-    <li><%= post.title %></li>
+    <li><%= link_to post.title, post_path(post.id) %></li>
   <% end %>
 </ul>
