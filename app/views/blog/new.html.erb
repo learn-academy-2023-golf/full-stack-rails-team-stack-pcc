@@ -1,0 +1,11 @@
+<h2>Add a new post:</h2>
+
+<%= form_with model: @blog do |form| %>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+    <%= form.submit "Add Post" %>
+<% end %>
+
+<p><%= link_to 'home', posts_path %></p>
