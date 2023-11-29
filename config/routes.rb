@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-get '/blogposts' => 'blog#index', as: 'blogposts'
-post '/blogposts' => 'blog#create'
-get '/blogposts/new' => 'blog#new', as: 'new_blogpost'
-get '/blogposts/:id' => 'blog#show', as: 'blogpost'
+get '/blogs' => 'blog#index', as: 'blogs'
+post '/blogs' => 'blog#create'
+get '/blogs/new' => 'blog#new', as: 'new_blog'
+get '/blogs/:id' => 'blog#show', as: 'blog'
 end
 

@@ -1,8 +1,8 @@
 <h3> My Blog <h3>
 <ul>
-<% @blogposts.each do |post| %>
-    <li><%= link_to post.title, blogpost_path(post.id) %></li>
+<% @blogs.each do |blog| %>
+    <li><%= link_to blog.title, blog_path(blog.id) %></li>
   <% end %>
 </ul>
 
-<p><%= link_to 'Add New Post', new_blogpost_path %>
+<p><%= link_to 'Add New Post', new_blog_path %>
