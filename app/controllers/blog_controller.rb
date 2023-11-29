@@ -1,14 +1,26 @@
 class BlogController < ApplicationController
     def index 
-        @posts = Blog.all
+      @blogposts = Blog.all
     end
 
     def show
-      @post = Blog.find(params[:id])  
+      @blogpost = Blog.find(params[:id])  
     end
     
     def new
-      @post = Blog.new
+      @blogpost = Blog.new
+    end
+
+    def create
+      @blogpost = Blog.create(blog_params)
+      # if @post.valid?
+      #   redirect_to posts_path
+      # end
+    end
+
+    private
+    def blog_params
+      params.require(:blog).permit(:title, :content)
     end
 end
 

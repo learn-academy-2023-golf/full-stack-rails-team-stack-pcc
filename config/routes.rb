@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-# HTTP verb, URL, hashrocket, controller, method
-get '/posts' => 'blog#index', as: 'posts'
-get '/posts/new' => 'blog#new', as: 'new_post'
-get '/post/:id' => 'blog#show', as: 'post'
+get '/blogposts' => 'blog#index', as: 'blogposts'
+post '/blogposts' => 'blog#create'
+get '/blogposts/new' => 'blog#new', as: 'new_blogpost'
+get '/blogposts/:id' => 'blog#show', as: 'blogpost'
 end
 
